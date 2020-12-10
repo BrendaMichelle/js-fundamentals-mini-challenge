@@ -237,6 +237,7 @@ function ticketNumberGeneratorFunc () {
   let tickNum = 0
   return function takeATicketNumberFunc (newLine) {
     newLine.push(newLine.length + 1)
+    // tickNum = newLine.length doesn't work, why?
     tickNum += 1
 
     return `Welcome. You are ticket number ${tickNum}`
