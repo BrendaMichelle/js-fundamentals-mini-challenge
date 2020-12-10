@@ -72,35 +72,52 @@ console.log("%c----------", "color: red")
 
 // ***** Question 5 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 5", "color: red")
-// const student1 = { name: "Duane", grade: 88 }
-// updateGrade(student1, 92)
-// console.log(student1)
-// // => { name: "Duane", grade: 92 }
-// console.log("%c----------", "color: red")
+console.log("%cQuestion 5", "color: red")
+
+const student1 = { name: "Duane", grade: 88 }
+
+function updateGrade(student, new_grade) {
+  student.grade = new_grade
+}
+
+updateGrade(student1, 92)
+console.log(student1)
+// => { name: "Duane", grade: 92 }
+console.log("%c----------", "color: red")
 
 
 
 // ***** Question 6 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 6", "color: red")
+console.log("%cQuestion 6", "color: red")
 
-// const users = [ 
-//   { 
-//     name: "Duane", phones: { cell: "555-123-4567", office: "555-456-7890" }
-//   },
-//   { 
-//     name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
-//   }
-// ]
-// printNameAndPhones(users)
-// // => "Duane"
+const users = [ 
+  { 
+    name: "Duane", phones: { cell: "555-123-4567", office: "555-456-7890" }
+  },
+  { 
+    name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
+  }
+]
+
+function printNameAndPhones(test_users) {
+  
+  for (i = 0; i < test_users.length; i++) {
+    console.log(test_users[i].name)
+    console.log(`Cell: ${test_users[i].phones.cell}`)
+    console.log(`Office: ${test_users[i].phones.office}`)
+  }
+
+}
+
+printNameAndPhones(users)
+// => "Duane"
 // => "Cell: 555-123-4567"
 // => "Office: 555-456-7890"
 // => "Liza"
 // => "Cell: 555-234-5678"
 // => "Office: 555-567-1234"
-// console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red") 
 
 
 // ***** Callbacks *****
@@ -118,23 +135,30 @@ function myMap(array, callback) {
 // ***** Callbacks - Question 1 *****
 
 // *** Uncomment the lines below to test
-// console.log("%cCallbacks - Question 1", "color: red")
+console.log("%cCallbacks - Question 1", "color: red")
 
-// console.log(myMap([1,2,3,4,5], triple)) 
-// // => [3,6,9,12,15]
+function triple(number) {
+  return (number * 3)
+}
+console.log(myMap([1,2,3,4,5], triple)) 
+// => [3,6,9,12,15]
 
-// console.log(myMap([2,4,6,8], triple))   
-// // => [6,12,18,24]
-// console.log("%c----------", "color: red") 
+console.log(myMap([2,4,6,8], triple))   
+// => [6,12,18,24]
+console.log("%c----------", "color: red") 
 
 
 // ***** Callbacks - Question 2 *****
 // *** Uncomment the lines below to test
-// console.log("%cCallbacks - Question 2", "color: red")
+console.log("%cCallbacks - Question 2", "color: red")
 
-// console.log(myMap(["Raffy", "Chase"], greet)) 
-// // => ["Hi, Raffy!", "Hi, Chase!"]
-// console.log("%c----------", "color: red") 
+function greet(name) {
+  return `Hi ${name}!`
+}
+
+console.log(myMap(["Raffy", "Chase"], greet)) 
+// => ["Hi, Raffy!", "Hi, Chase!"]
+console.log("%c----------", "color: red") 
 
 
 
@@ -153,30 +177,36 @@ function nowServing(line) {
   return `Currently serving ${line.shift()}.`
 }
 
-const line = []
+function takeATicketNumber(line) {
+  const line_number = line.push((line.length) + 1)
+  ticket_counter += 1
+  return `Welcome. You are ticket number ${ticket_counter}`
+}
 
+const line = []
+let ticket_counter = 0
 // ***** Scope & Closures - Question 1 *****
 
 
 // *** Uncomment the lines below to test
-// console.log("%cScope & Closures - Question 1", "color: red")
+console.log("%cScope & Closures - Question 1", "color: red")
 
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 1`
+console.log(takeATicketNumber(line))
+// => `Welcome. You are ticket number 1`
 
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 2`
+console.log(takeATicketNumber(line))
+// => `Welcome. You are ticket number 2`
 
-// console.log(nowServing(line))
-// // => `Currently serving 1.`
+console.log(nowServing(line))
+// => `Currently serving 1.`
 
-// console.log(nowServing(line))
-// // => `Currently serving 2.`
+console.log(nowServing(line))
+// => `Currently serving 2.`
 
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 3`
+console.log(takeATicketNumber(line))
+// => `Welcome. You are ticket number 3`
 
-// console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red") 
 
 // ***** Scope & Closures - Question 2 *****
 // *** Uncomment the lines below to test
