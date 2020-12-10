@@ -2,6 +2,10 @@
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 1", "color: red") 
 
+let counter = 1
+counter = 2
+
+
 // console.log(counter) 
 // // => 2
 // console.log("%c----------", "color: red") 
@@ -12,6 +16,8 @@
 // *** after testing, comment the line causing the error back in 
 // *** otherwise, the error will stop the rest of your code from running
 // console.log("%cQuestion 2", "color: red") 
+
+const name = "kevin"
 
 // console.log(name)
 // => "Raffy"
@@ -25,6 +31,16 @@
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 3", "color: red") 
 
+
+function drinkWater(current_thirst_level) {
+  console.log("Man I sure am thirsty")
+  current_thirst_level--
+  console.log("Ahh that hits the spot")
+  console.log(current_thirst_level)
+
+}
+
+
 // console.log(drinkWater(12))
 // // => "Man I sure am thirsty"
 // // => "Ahh that hits the spot"
@@ -36,6 +52,17 @@
 // ***** Question 4 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 4", "color: red") 
+
+function sameSameButDifferent(num, maybeNum) {
+  if (num === maybeNum) {
+    console.log("same same")
+  } else if (num == maybeNum) {
+    console.log("same same (but different)")
+  } else {
+    console.log("different")
+  }
+
+}
 
 // console.log(sameSameButDifferent(5, 5)) 
 // // => "same same"
@@ -61,6 +88,11 @@
 // // => { name: "Duane", grade: 92 }
 // console.log("%c----------", "color: red")
 
+function updateGrade(student, grade) {
+  student.grade = grade
+}
+
+
 
 
 // ***** Question 6 *****
@@ -75,6 +107,15 @@
 //     name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
 //   }
 // ]
+
+function print_name_and_phones(users){
+  users.forEach(){
+    console.log(users.name)
+  
+  }
+
+}
+
 // printNameAndPhones(users)
 // // => "Duane"
 // => "Cell: 555-123-4567"
