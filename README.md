@@ -25,27 +25,27 @@ To get feedback on your code, make a [pull request from your forked repo](https:
 This assessment is meant to give you a chance to practice with the key skills you're expected to know as we go along. The topics you should focus on are listed out below. It's not expected that you will have mastered all these skills yet, but completing this assessment will help us learn how to best focus out time instructing the class as a whole and also how to help each student individually.
 
 ### Question 1
-
+<!-- 
 Create a variable called `counter` and assign it to a value of 1. Then, on a new line, *reassign* the value of `counter` to 2.
 
 ```js
 console.log(counter) 
 // => 2
-```
+``` -->
 
 ### Question 2
 
-Create a variable called `name` and assign it to a value of your name. You *should not* be able to reassign the variable after it has been created.
+<!-- Create a variable called `name` and assign it to a value of your name. You *should not* be able to reassign the variable after it has been created.
 
 ```js
 // attempting to reassign should throw an error
 name = "Not Raffy" 
 // => TypeError
-```
+``` -->
 
 ### Question 3
 
-Convert this Ruby method into a Javascript function. Follow Javascript syntax and naming conventions for your function.
+<!-- Convert this Ruby method into a Javascript function. Follow Javascript syntax and naming conventions for your function.
 
 ```rb
 def drink_water(current_thirst_level)
@@ -63,11 +63,11 @@ console.log(drinkWater(12))
 // => "Man I sure am thirsty"
 // => "Ahh that hits the spot"
 // => 11
-```
+``` -->
 
 ### Question 4
 
-Write a function `sameSameButDifferent` that takes in two arguments, `num` and `maybeNum`. If `num` and `maybeNum` are both numbers, and the same value, it should return `"same same"`. If `num` is the same value as `maybeNum` after converting `maybeNum` to a number, it should return `"same same (but different)"`. Otherwise, it should return `"different"`.
+<!-- Write a function `sameSameButDifferent` that takes in two arguments, `num` and `maybeNum`. If `num` and `maybeNum` are both numbers, and the same value, it should return `"same same"`. If `num` is the same value as `maybeNum` after converting `maybeNum` to a number, it should return `"same same (but different)"`. Otherwise, it should return `"different"`.
 
 ```js
 console.log(sameSameButDifferent(5, 5)) 
@@ -81,11 +81,11 @@ console.log(sameSameButDifferent(5, 7))
 
 console.log(sameSameButDifferent(123, "122")) 
 // => "different"
-```
+``` -->
 
 ### Question 5
 
-Write a function `updateGrade` that takes two arguments: a `student` (object), and a `grade` (number). Calling this function should update the grade property on the `student` object to be the value of the `grade` argument.
+<!-- Write a function `updateGrade` that takes two arguments: a `student` (object), and a `grade` (number). Calling this function should update the grade property on the `student` object to be the value of the `grade` argument.
 
 ```js
 const student1 = { name: "Duane", grade: 88 }
@@ -94,11 +94,11 @@ updateGrade(student1, 92)
 
 console.log(student1)
 // => { name: "Duane", grade: 92 }
-```
+``` -->
 
 ### Question 6
 
-Convert this Ruby code into its Javascript equivalent. Follow Javascript syntax and naming conventions for your function.
+<!-- Convert this Ruby code into its Javascript equivalent. Follow Javascript syntax and naming conventions for your function.
 
 ```rb
 def print_name_and_phones(users)
@@ -133,7 +133,7 @@ print_name_and_phones(users)
 # => "Liza"
 # => "Cell: 555-234-5678"
 # => "Office: 555-567-1234"
-```
+``` -->
 
 ### Callbacks
 
