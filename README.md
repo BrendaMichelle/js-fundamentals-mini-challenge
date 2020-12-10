@@ -240,22 +240,22 @@ console.log(takeATicketNumber(line))
 Try to solve the problem above using a higher order function, and without using a global variable for the ticket number. Write a higher order function called `ticketNumberGeneratorFunc` that returns a nested `takeATicketNumber` function. The other functionality should remain the same. 
 
 ```js
-const newLine = []
+// const newLine = []
 
-const takeATicketNumberFunc = ticketNumberGeneratorFunc()
+// const takeATicketNumberFunc = ticketNumberGeneratorFunc()
 
-console.log(takeATicketNumberFunc(newLine))
-// => `Welcome. You are ticket number 1`
+// console.log(takeATicketNumberFunc(newLine))
+// // => `Welcome. You are ticket number 1`
 
-console.log(takeATicketNumberFunc(newLine))
-// => `Welcome. You are ticket number 2`
+// console.log(takeATicketNumberFunc(newLine))
+// // => `Welcome. You are ticket number 2`
 
-console.log(nowServing(newLine))
-// => `Currently serving 1.`
+// console.log(nowServing(newLine))
+// // => `Currently serving 1.`
 
-console.log(nowServing(newLine))
-// => `Currently serving 2.`
+// console.log(nowServing(newLine))
+// // => `Currently serving 2.`
 
-console.log(takeATicketNumberFunc(line))
-// => `Welcome. You are ticket number 3`
+// console.log(takeATicketNumberFunc(line))
+// // => `Welcome. You`~ are ticket number 3`
 ```
