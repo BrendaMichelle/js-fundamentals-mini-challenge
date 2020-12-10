@@ -1,9 +1,19 @@
+// Hi Michelle! I am still feeling quite shakey with objects and callbacks. 
+//I think I need time to play around more with labs, as yesterday I only got through the reading. 
+//I made it to question 6, but was pretty much stumped on and after that. 
+
+
 // ***** Question 1 *****
 // *** Uncomment the lines below to test
+
+let counter = 1
+
+counter = 2 
+
 // console.log("%cQuestion 1", "color: red") 
 
 // console.log(counter) 
-// // => 2
+// //=> 2
 // console.log("%c----------", "color: red") 
 
 
@@ -13,10 +23,12 @@
 // *** otherwise, the error will stop the rest of your code from running
 // console.log("%cQuestion 2", "color: red") 
 
+const name = 'Amelia' 
+
 // console.log(name)
-// => "Raffy"
+// // => "Raffy"
 // name = "Not Raffy" 
-// => TypeError
+// // => TypeError
 // console.log("%c----------", "color: red") 
 
 
@@ -24,6 +36,13 @@
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 3", "color: red") 
+
+function drinkWater(currentThirstLevel) {
+  console.log('Man I sure am thirsty')
+  currentThirstLevel -= 1
+  console.log('Ahh that hits the spot')
+  console.log(currentThirstLevel)
+}
 
 // console.log(drinkWater(12))
 // // => "Man I sure am thirsty"
@@ -36,6 +55,16 @@
 // ***** Question 4 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 4", "color: red") 
+
+function sameSameButDifferent(num, maybeNum) {
+  if ( num === maybeNum ) {
+    return "same same"
+  } else if ( num == maybeNum ) {
+    return "same same (but different)"
+  }  else {
+    return "different"
+  }
+}
 
 // console.log(sameSameButDifferent(5, 5)) 
 // // => "same same"
@@ -55,6 +84,11 @@
 // ***** Question 5 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 5", "color: red")
+
+function updateGrade(student, grade) {
+  student.grade = grade
+}
+
 // const student1 = { name: "Duane", grade: 88 }
 // updateGrade(student1, 92)
 // console.log(student1)
@@ -67,6 +101,13 @@
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 6", "color: red")
 
+// function printNameAndPhones(users) {
+//   for (let i = 0; i < users.length; i++) {
+//     console.log([i].name)
+    
+//   }
+// }
+
 // const users = [ 
 //   { 
 //     name: "Duane", phones: { cell: "555-123-4567", office: "555-456-7890" }
@@ -77,11 +118,11 @@
 // ]
 // printNameAndPhones(users)
 // // => "Duane"
-// => "Cell: 555-123-4567"
-// => "Office: 555-456-7890"
-// => "Liza"
-// => "Cell: 555-234-5678"
-// => "Office: 555-567-1234"
+// // => "Cell: 555-123-4567"
+// // => "Office: 555-456-7890"
+// // => "Liza"
+// // => "Cell: 555-234-5678"
+// // => "Office: 555-567-1234"
 // console.log("%c----------", "color: red") 
 
 
@@ -100,14 +141,19 @@ function myMap(array, callback) {
 // ***** Callbacks - Question 1 *****
 
 // *** Uncomment the lines below to test
-// console.log("%cCallbacks - Question 1", "color: red")
+console.log("%cCallbacks - Question 1", "color: red")
 
-// console.log(myMap([1,2,3,4,5], triple)) 
-// // => [3,6,9,12,15]
+function triple() {
+    array * 3
+}
 
-// console.log(myMap([2,4,6,8], triple))   
-// // => [6,12,18,24]
-// console.log("%c----------", "color: red") 
+
+console.log(myMap([1,2,3,4,5], triple)) 
+// => [3,6,9,12,15]
+
+console.log(myMap([2,4,6,8], triple))   
+// => [6,12,18,24]
+console.log("%c----------", "color: red") 
 
 
 // ***** Callbacks - Question 2 *****
