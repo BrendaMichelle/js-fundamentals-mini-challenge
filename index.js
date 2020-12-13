@@ -1,9 +1,9 @@
 // ***** Question 1 *****
 // *** Uncomment the lines below to test
-var counter = 1
+let counter = 1
+counter = counter + 1
 console.log(“%cQuestion 1”, “color: red”) 
 
-var counter = 2
 console.log(counter) 
 // => 2
 console.log(“%c----------“, “color: red”) 
@@ -13,12 +13,14 @@ console.log(“%c----------“, “color: red”)
 // *** Uncomment the lines below to test
 // *** after testing, comment the line causing the error back in 
 // *** otherwise, the error will stop the rest of your code from running
+const name = "David"
+
 console.log(“%cQuestion 2", “color: red”) 
 
 console.log(name)
 // => “Raffy”
-name = “Not Raffy” 
-name = “David Medina”
+// name = “Not Raffy” 
+// name = “David Medina”
 
 // => TypeError
 console.log(“%c----------“, “color: red”) 
@@ -27,15 +29,20 @@ console.log(“%c----------“, “color: red”)
 
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
-function drinkWater(current_thirst_level){
-// => “Man I sure am thirsty”
-console.log(“Man I sure am Thirsty”)
-  console.log(current_thirst_level -= 1)
-// => “Ahh that hits the spot”
-console.log(“Ahh that hits the spot”)
-  console.log(current_thirst_level)
-
+function drinkWater(currentThirstLevel){
+  console.log("Man I sure am thirsty")
+  currentThirstLevel -= 1
+  console.log("Ahh that hits the spot")
+  return currentThirstLevel
 }
+
+// def drink_water(current_thirst_level)
+//   puts "Man I sure am thirsty"
+//   current_thirst_level -= 1
+//   puts "Ahh that hits the spot"
+//   current_thirst_level
+// end
+
 console.log(“%cQuestion 3", “color: red”) 
 
 console.log(drinkWater(12))
@@ -48,18 +55,16 @@ console.log(“%c----------“, “color: red”)
 
 // ***** Question 4 *****
 // *** Uncomment the lines below to test
-
-function sameSameButDifferent(num, maybeNum){
-  
-  if ( maybeNum === parseInt(maybeNum) && num === maybeNum) {
-    console.log(“same same”)
-
-  } else if (maybeNum === parseInt(maybeNum)) {
-    console.log(“same same (but different)“)
+function sameSameButDifferent(num,maybeNum){
+  if(num === maybeNum){
+    return "same same"
+  } else if (num === patseInt(maybeNum)){
+    return "same same (but different)"
   } else {
-    console.log(“different”)
+    return "different"
   }
-    
+
+
 }
 
 console.log(“%cQuestion 4", “color: red”) 
@@ -83,12 +88,15 @@ console.log(“%c----------“, “color: red”)
 // *** Uncomment the lines below to test
 function updateGrade (student, grade){
  let newGrade = grade
- console.log( student, newGrade)
-
+ console.log( student, grade)
+  student.grade = grade
 }
 console.log(“%cQuestion 5", “color: red”)
+
 const student1 = { name: “Duane”, grade: 88 }
+
 updateGrade(student1, 92)
+
 console.log(student1)
 // => { name: “Duane”, grade: 92 }
 console.log(“%c----------“, “color: red”)
@@ -97,36 +105,30 @@ console.log(“%c----------“, “color: red”)
 
 // ***** Question 6 *****
 // *** Uncomment the lines below to test
-// function printNameAndPhones(users){
-
-//   users.foreach(function(userHash))
-//     console.log(userHash[Symbol(‘name’)])
-//     console.log(`Cell:${[(userHash[Symbol(‘phones’)],[Symbol(‘cell’)]}`)
-//     console.log(`Office:${[Symbol(‘phones’)][Symbol(‘office’)]}`)
-//   }
-
-
-// stuck here !!
-
-
-// console.log(“%cQuestion 6", “color: red”)
-
-// const users = [ 
-//   { 
-//     name: “Duane”, phones: { cell: “555-123-4567”, office: “555-456-7890" }
-//   },
-//   { 
-//     name: “Liza”, phones: { cell: “555-234-5678", office: “555-567-1234” }
-//   }
-// ]
-// printNameAndPhones(users)
-// // => “Duane”
-// // => “Cell: 555-123-4567”
-// // => “Office: 555-456-7890"
-// // => “Liza”
-// // => “Cell: 555-234-5678"
-// // => “Office: 555-567-1234”
-// console.log(“%c----------“, “color: red”) 
+function printNameAndPhones(users){
+  users.forEach(function(userObj){
+    console.log(userObj.name)
+    console.log(`Cell: ${userObj.phones.cell}`)
+    console.log(`Office: ${userObj.phones.office}`)
+  })
+}
+console.log(“%cQuestion 6", “color: red”)
+const users = [ 
+  { 
+    name: “Duane”, phones: { cell: “555-123-4567”, office: “555-456-7890" }
+  },
+  { 
+    name: “Liza”, phones: { cell: “555-234-5678", office: “555-567-1234” }
+  }
+]
+printNameAndPhones(users)
+// => “Duane”
+// => “Cell: 555-123-4567”
+// => “Office: 555-456-7890"
+// => “Liza”
+// => “Cell: 555-234-5678"
+// => “Office: 555-567-1234”
+console.log(“%c----------“, “color: red”) 
 
 
 // ***** Callbacks *****
@@ -170,13 +172,13 @@ console.log(“%c----------“, “color: red”)
 
 
 // ***** Scope & Closures *****
-
-function takeANumber(line, name) {
-  line.push(name)
-
-  return `Welcome, ${name}. You are number ${line.length} in line.`
+let ticketNumber = 0
+function takeANumber(line) {
+  ticketNumber ++
+  line.push(ticketNumber)
+  return `Welcome, You are ticket ${ticketNumber}.`
 }
-
+ 
 function nowServing(line) {
   if (!line.length) {
     return “There is nobody waiting to be served!”
@@ -190,24 +192,24 @@ const line = []
 
 
 // *** Uncomment the lines below to test
-// console.log(“%cScope & Closures - Question 1”, “color: red”)
+console.log(“%cScope & Closures - Question 1”, “color: red”)
 
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 1`
+console.log(takeATicketNumber(line))
+// => `Welcome. You are ticket number 1`
 
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 2`
+console.log(takeATicketNumber(line))
+// => `Welcome. You are ticket number 2`
 
-// console.log(nowServing(line))
-// // => `Currently serving 1.`
+console.log(nowServing(line))
+// => `Currently serving 1.`
 
-// console.log(nowServing(line))
-// // => `Currently serving 2.`
+console.log(nowServing(line))
+// => `Currently serving 2.`
 
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 3`
+console.log(takeATicketNumber(line))
+// => `Welcome. You are ticket number 3`
 
-// console.log(“%c----------“, “color: red”) 
+console.log(“%c----------“, “color: red”) 
 
 // ***** Scope & Closures - Question 2 *****
 // *** Uncomment the lines below to test
