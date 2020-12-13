@@ -142,14 +142,15 @@ function myMap(array, callback) {
   }
   return result
 }
-function triple() {
- repeat(3)
-}
+
 
 // ***** Callbacks - Question 1 *****
 
 // *** Uncomment the lines below to test
-
+function triple(num) {
+  final = num * 3
+  return final
+ }
 
 console.log(“%cCallbacks - Question 1", “color: red”)
 
@@ -163,22 +164,20 @@ console.log(“%c----------“, “color: red”)
 
 // ***** Callbacks - Question 2 *****
 // *** Uncomment the lines below to test
-// console.log(“%cCallbacks - Question 2", “color: red”)
 
-// console.log(myMap([“Raffy”, “Chase”], greet)) 
-// // => [“Hi, Raffy!“, “Hi, Chase!“]
-// console.log(“%c----------“, “color: red”) 
+function greet(name){
+return `Hi, ${name}`
+}
+console.log(“%cCallbacks - Question 2", “color: red”)
+
+console.log(myMap([“Raffy”, “Chase”], greet)) 
+// => [“Hi, Raffy!“, “Hi, Chase!“]
+console.log(“%c----------“, “color: red”) 
 
 
 
 // ***** Scope & Closures *****
-let ticketNumber = 0
-function takeANumber(line) {
-  ticketNumber ++
-  line.push(ticketNumber)
-  return `Welcome, You are ticket ${ticketNumber}.`
-}
- 
+
 function nowServing(line) {
   if (!line.length) {
     return “There is nobody waiting to be served!”
@@ -189,7 +188,13 @@ function nowServing(line) {
 const line = []
 
 // ***** Scope & Closures - Question 1 *****
-
+let ticketNumber = 0
+function takeANumber(line) {
+  ticketNumber ++
+  line.push(ticketNumber)
+  return `Welcome, You are ticket ${ticketNumber}.`
+}
+ 
 
 // *** Uncomment the lines below to test
 console.log(“%cScope & Closures - Question 1”, “color: red”)
