@@ -237,4 +237,4 @@ console.log(“%c----------“, “color: red”)
 // console.log(takeATicketNumberFunc(newLine))
 // // => `Welcome. You are ticket number 3`
 
-// console.log(“%c----------“, “color: red”)
+// console.log(“%c----------“, “color: red”)asasdf
