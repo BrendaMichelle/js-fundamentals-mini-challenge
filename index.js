@@ -214,13 +214,13 @@ function takeATicketNumber(line) {
 // ***** Scope & Closures - Question 2 *****
 function ticketNumberGeneratorFunc() {
   let ticketNum = 0;
-  return function (line) {
+  function takeATicketNumber (line) {
   ticketNum += 1; 
   line.push(ticketNum);
-  return `Welcome. You are ticket number ${ticketNum}` ;
+  console.log(`Welcome. You are ticket number ${ticketNum}`) ;
 
   }
-
+  return takeATicketNumber;
 }
 
 // *** Uncomment the lines below to test
