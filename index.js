@@ -1,6 +1,10 @@
 // ***** Question 1 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 1", "color: red") 
+let counter = 1
+counter = 2 
+
+// console.log(counter, "color: red") 
+
 
 // console.log(counter) 
 // // => 2
@@ -11,10 +15,13 @@
 // *** Uncomment the lines below to test
 // *** after testing, comment the line causing the error back in 
 // *** otherwise, the error will stop the rest of your code from running
-// console.log("%cQuestion 2", "color: red") 
+const name = "Cam"
+
+// console.log(name, "color: red") 
+
 
 // console.log(name)
-// => "Raffy"
+// // => "Raffy"
 // name = "Not Raffy" 
 // => TypeError
 // console.log("%c----------", "color: red") 
@@ -24,6 +31,12 @@
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 3", "color: red") 
+
+function drinkWater(currentThirstLevel){
+  console.log("Man I sure am thirsty")
+  console.log("Ahh that hits the spot")
+  currentThirstLevel
+}
 
 // console.log(drinkWater(12))
 // // => "Man I sure am thirsty"
@@ -36,6 +49,18 @@
 // ***** Question 4 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 4", "color: red") 
+
+function sameSameButDifferent(num, maybeNum){
+  if (num === maybeNum){
+    return "same same"
+  }
+  elsif (num == maybeNum){
+    return "same same (but different)"
+  }
+  else {
+    return "different"
+  }
+}
 
 // console.log(sameSameButDifferent(5, 5)) 
 // // => "same same"
@@ -54,6 +79,9 @@
 
 // ***** Question 5 *****
 // *** Uncomment the lines below to test
+
+
+
 // console.log("%cQuestion 5", "color: red")
 // const student1 = { name: "Duane", grade: 88 }
 // updateGrade(student1, 92)
