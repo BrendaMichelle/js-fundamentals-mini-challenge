@@ -24,7 +24,7 @@ To get feedback on your code, make a [pull request from your forked repo](https:
 
 This assessment is meant to give you a chance to practice with the key skills you're expected to know as we go along. The topics you should focus on are listed out below. It's not expected that you will have mastered all these skills yet, but completing this assessment will help us learn how to best focus out time instructing the class as a whole and also how to help each student individually.
 
-<!-- ### Question 1
+### Question 1
 
 Create a variable called `counter` and assign it to a value of 1. Then, on a new line, *reassign* the value of `counter` to 2.
 
@@ -63,7 +63,7 @@ console.log(drinkWater(12))
 // => "Man I sure am thirsty"
 // => "Ahh that hits the spot"
 // => 11
-``` -->
+```
 
 ### Question 4
 
