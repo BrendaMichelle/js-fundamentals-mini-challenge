@@ -155,7 +155,8 @@ You should not change any code inside the `myMap` function to get the following 
 
 ### Callbacks - Question 1
 
-Write a function `triple` to be used as a callback function with the `myMap` function, so that calling `myMap` with an array of numbers and your `triple` function will return a new array with each value from the original array tripled.
+Write a function `triple` to be used as a callback function with the `myMap` function, 
+so that calling `myMap` with an array of numbers and your `triple` function will return a new array with each value from the original array tripled.
 
 ```js
 console.log(myMap([1,2,3,4,5], triple)) 
@@ -167,7 +168,8 @@ console.log(myMap([2,4,6,8], triple))
 
 ### Callbacks - Question 2
 
-Write a function `greet` to be used as a callback function with the `myMap` function, so that calling `myMap` with an array of names and your `greet` function will return a new array with a greeting for each name.
+Write a function `greet` to be used as a callback function with the `myMap` function, 
+so that calling `myMap` with an array of names and your `greet` function will return a new array with a greeting for each name.
 
 ```js
 console.log(myMap(["Raffy", "Chase"], greet)) 
@@ -209,7 +211,8 @@ console.log(nowServing(line))
 
 ### Scopes & Closures - Question 1
 
-Create a `takeATicketNumber` function that will replace the `takeANumber` function. It only takes in one argument, a `line` (array). Instead of working with names, we'll have it work with ticket numbers. Calling `takeATicketNumber` should do two things:
+Create a `takeATicketNumber` function that will replace the `takeANumber` function. It only takes in one argument, a `line` (array). 
+Instead of working with names, we'll have it work with ticket numbers. Calling `takeATicketNumber` should do two things:
 
 - Add a ticket number to the line (starting with ticket number 1)
 - Return a message `"Welcome. You are ticket number 1"`
@@ -237,7 +240,9 @@ console.log(takeATicketNumber(line))
 
 ### Scopes & Closures - Question 2 (BONUS)
 
-Try to solve the problem above using a higher order function, and without using a global variable for the ticket number. Write a higher order function called `ticketNumberGeneratorFunc` that returns a nested `takeATicketNumber` function. The other functionality should remain the same. 
+Try to solve the problem above using a higher order function, and without using a global variable for the ticket number. 
+Write a higher order function called `ticketNumberGeneratorFunc` that returns a nested `takeATicketNumber` function. 
+The other functionality should remain the same. 
 
 ```js
 const newLine = []
