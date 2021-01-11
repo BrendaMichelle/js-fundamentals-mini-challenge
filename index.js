@@ -1,7 +1,8 @@
 // ***** Question 1 *****
 // *** Uncomment the lines below to test
+// let counter = 1
 // console.log("%cQuestion 1", "color: red") 
-
+// let counter = 2
 // console.log(counter) 
 // // => 2
 // console.log("%c----------", "color: red") 
@@ -12,11 +13,11 @@
 // *** after testing, comment the line causing the error back in 
 // *** otherwise, the error will stop the rest of your code from running
 // console.log("%cQuestion 2", "color: red") 
-
+// const name = "Zach"
 // console.log(name)
-// => "Raffy"
-// name = "Not Raffy" 
-// => TypeError
+// // => "Raffy"
+// // name = "Not Raffy" 
+// // => TypeError
 // console.log("%c----------", "color: red") 
 
 
@@ -24,7 +25,12 @@
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 3", "color: red") 
-
+// function drinkWater(current_thirst_level){
+//   console.log("Man I sure am thirsty")
+  
+//   console.log("Ahh that hits the spot")
+//   return current_thirst_level -= 1
+// }
 // console.log(drinkWater(12))
 // // => "Man I sure am thirsty"
 // // => "Ahh that hits the spot"
@@ -35,16 +41,30 @@
 
 // ***** Question 4 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 4", "color: red") 
+// console.log("%cQuestion 4", "color: red")
+
+// function sameSameButDifferent(num, maybeNum){
+//   if (num === maybeNum)
+    
+//     return "same same"
+  
+//   else if (num == maybeNum)
+    
+//     return "same same (but different)"
+  
+//   else 
+//     return "different"
+  
+// }
 
 // console.log(sameSameButDifferent(5, 5)) 
-// // => "same same"
+// // // => "same same"
 
 // console.log(sameSameButDifferent(123, "123")) 
-// // => "same same (but different)"
+// // // => "same same (but different)"
 
 // console.log(sameSameButDifferent(5, 7)) 
-// // => "different"
+// // // => "different"
 
 // console.log(sameSameButDifferent(123, "122")) 
 // // => "different"
@@ -56,6 +76,11 @@
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 5", "color: red")
 // const student1 = { name: "Duane", grade: 88 }
+
+// function updateGrade(student, grade){
+//   student.grade = grade
+// }
+
 // updateGrade(student1, 92)
 // console.log(student1)
 // // => { name: "Duane", grade: 92 }
@@ -75,6 +100,15 @@
 //     name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
 //   }
 // ]
+
+// function printNameAndPhones(users) {
+//   users.forEach(function(user){
+//     console.log(user.name)
+//     console.log(`Cell: ${user.phones.cell}`)
+//     console.log(`Office: ${user.phones.office}`)
+//   })
+// }
+
 // printNameAndPhones(users)
 // // => "Duane"
 // => "Cell: 555-123-4567"
@@ -102,8 +136,13 @@ function myMap(array, callback) {
 // *** Uncomment the lines below to test
 // console.log("%cCallbacks - Question 1", "color: red")
 
+// function triple(number) {
+//   return number * 3
+// }
+
+
 // console.log(myMap([1,2,3,4,5], triple)) 
-// // => [3,6,9,12,15]
+// // // => [3,6,9,12,15]
 
 // console.log(myMap([2,4,6,8], triple))   
 // // => [6,12,18,24]
@@ -113,6 +152,11 @@ function myMap(array, callback) {
 // ***** Callbacks - Question 2 *****
 // *** Uncomment the lines below to test
 // console.log("%cCallbacks - Question 2", "color: red")
+
+// function greet(name){
+//   return `Hi, ${name}!`
+// }
+
 
 // console.log(myMap(["Raffy", "Chase"], greet)) 
 // // => ["Hi, Raffy!", "Hi, Chase!"]
@@ -142,6 +186,13 @@ const line = []
 
 // *** Uncomment the lines below to test
 // console.log("%cScope & Closures - Question 1", "color: red")
+// let ticketNum = 0
+
+// function takeATicketNumber(line){
+//   line.push(ticketNum += 1)
+//   return `Welcome.  You are ticket number ${ticketNum}`
+// }
+
 
 // console.log(takeATicketNumber(line))
 // // => `Welcome. You are ticket number 1`
@@ -166,6 +217,17 @@ const line = []
 
 // const newLine = []
 // const takeATicketNumberFunc = ticketNumberGeneratorFunc()
+
+// function ticketNumberGeneratorFunc(){
+
+//       MY MIND IS BLOWN HERE!
+      // MY MIND IS BLOWN HERE!
+      // MY MIND IS BLOWN HERE!
+      // MY MIND IS BLOWN HERE!
+      // MY MIND IS BLOWN HERE!
+
+// }
+
 // console.log(takeATicketNumberFunc(newLine))
 // // => `Welcome. You are ticket number 1`
 
