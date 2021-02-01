@@ -5,6 +5,9 @@
 // console.log(counter) 
 // // => 2
 // console.log("%c----------", "color: red") 
+let counter = 1;
+counter = 2;
+console.log(counter) 
 
 
 // ***** Question 2 *****
@@ -19,7 +22,8 @@
 // => TypeError
 // console.log("%c----------", "color: red") 
 
-
+const name = "Raffy"
+console.log(name)
 
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
@@ -31,22 +35,47 @@
 // // => 11
 // console.log("%c----------", "color: red") 
 
+// function drinkWater(current_thirst_level) {
+//   if (current_thirst_level -= 1){
+//     return "Man I sure am thirsty"
+//   }
+//   else{
+//     return "Ahh that hits the spot"
+//   }
+// }
+
+function drinkWater(currentThirstLevel) {
+  console.log("Man, I sure am thirsty")
+  console.log("Ahh that hits the spot")
+  return currentThirstLevel - 1
+}
+console.log(drinkWater(12))
 
 
 // ***** Question 4 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 4", "color: red") 
+function sameSameButDifferent(num, maybeNum) {
+  if (num === maybeNum){
+  return "same same"
+  }
+  else if (num == maybeNum){
+    return "same same (but different)"
+  }
+  else return "different"
+  }
+  
 
-// console.log(sameSameButDifferent(5, 5)) 
+console.log(sameSameButDifferent(5, 5)) 
 // // => "same same"
 
-// console.log(sameSameButDifferent(123, "123")) 
+console.log(sameSameButDifferent(123, "123")) 
 // // => "same same (but different)"
 
-// console.log(sameSameButDifferent(5, 7)) 
+console.log(sameSameButDifferent(5, 7)) 
 // // => "different"
 
-// console.log(sameSameButDifferent(123, "122")) 
+console.log(sameSameButDifferent(123, "122")) 
 // // => "different"
 // console.log("%c----------", "color: red") 
 
@@ -55,27 +84,45 @@
 // ***** Question 5 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 5", "color: red")
-// const student1 = { name: "Duane", grade: 88 }
-// updateGrade(student1, 92)
-// console.log(student1)
+const student1 = { name: "Duane", grade: 88 }
+updateGrade(student1, 92)
+console.log(student1)
 // // => { name: "Duane", grade: 92 }
 // console.log("%c----------", "color: red")
 
+// Write a function `updateGrade` that takes two arguments: a `student` (object), and a `grade` (number). Calling this function should update the grade property on the `student` object to be the value of the `grade` argument.
 
-
+function updateGrade(student, grade){
+student.grade = grade
+console.log(student.name, grade)
+}
 // ***** Question 6 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 6", "color: red")
+// def print_name_and_phones(users)
+//   users.each do |user_hash|
+//     puts user_hash[:name]
+//     puts "Cell: #{user_hash[:phones][:cell]}"
+//     puts "Office: #{user_hash[:phones][:office]}"
+//   end
+// end
 
-// const users = [ 
-//   { 
-//     name: "Duane", phones: { cell: "555-123-4567", office: "555-456-7890" }
-//   },
-//   { 
-//     name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
-//   }
-// ]
-// printNameAndPhones(users)
+function printNameAndPhones(users) {
+  users.forEach(function (user) {
+    console.log(user.name)
+    console.log(`Cell: ${user.phones.cell}`)
+    console.log(`Office: ${user.phones.office}`)
+  })
+}
+const users = [ 
+  { 
+    name: "Duane", phones: { cell: "555-123-4567", office: "555-456-7890" }
+  },
+  { 
+    name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
+  }
+]
+printNameAndPhones(users)
 // // => "Duane"
 // => "Cell: 555-123-4567"
 // => "Office: 555-456-7890"
