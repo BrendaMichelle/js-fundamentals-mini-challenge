@@ -217,18 +217,18 @@ console.log("%c----------", "color: red")
 console.log("%cScope & Closures - Question 2", "color: red")
 
 const newLine = []
-const takeATicketNumberFunc = ticketNumberGeneratorFunc()
 
-function ticketNumberGeneratorFunc() {
+const ticketNumberGeneratorFunc = () => {
   let newTicket = 1
 
-  function takeATicketNumber(line) {
-      console.log(`Welcome. You are tickey number ${newTicket}`)
+  return function (line) {
+      console.log(`Welcome. You are ticket number ${newTicket}`)
       line.push(newTicket)
       newTicket++
   }
-  return takeATicketNumber
+
 }
+const takeATicketNumberFunc = ticketNumberGeneratorFunc()
 
 console.log(takeATicketNumberFunc(newLine))
 // => `Welcome. You are ticket number 1`
