@@ -1,7 +1,8 @@
 // ***** Question 1 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 1", "color: red") 
-
+// var counter = 1;
+// counter = 2;
 // console.log(counter) 
 // // => 2
 // console.log("%c----------", "color: red") 
@@ -12,11 +13,11 @@
 // *** after testing, comment the line causing the error back in 
 // *** otherwise, the error will stop the rest of your code from running
 // console.log("%cQuestion 2", "color: red") 
-
+//  const name = "Matthew Thomas";
 // console.log(name)
-// => "Raffy"
+// // => "Raffy"
 // name = "Not Raffy" 
-// => TypeError
+// // => TypeError
 // console.log("%c----------", "color: red") 
 
 
@@ -24,7 +25,12 @@
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 3", "color: red") 
-
+function drinkWater(currentThirstLevel){
+console.log("Man I sure am thirsty")
+currentThirstLevel -= 1
+console.log ("Ahh that hits the spot")
+return currentThirstLevel;
+}
 // console.log(drinkWater(12))
 // // => "Man I sure am thirsty"
 // // => "Ahh that hits the spot"
@@ -40,7 +46,22 @@
 // console.log(sameSameButDifferent(5, 5)) 
 // // => "same same"
 
-// console.log(sameSameButDifferent(123, "123")) 
+function sameSameButDifferent(num,maybeNum){
+  
+  if (num === maybeNum)
+  {
+    return "same same";
+  }
+  else if (num == maybeNum)
+  {
+    return "same same but different"
+  }
+  else
+  {
+    return "Different."
+  }
+  }
+// console.log(sameSameButDifferent(123, '123')) 
 // // => "same same (but different)"
 
 // console.log(sameSameButDifferent(5, 7)) 
@@ -51,6 +72,9 @@
 // console.log("%c----------", "color: red") 
 
 
+function updateGrade(student, grade) {
+  student.grade = grade
+}
 
 // ***** Question 5 *****
 // *** Uncomment the lines below to test
@@ -62,6 +86,7 @@
 // console.log("%c----------", "color: red")
 
 
+  
 
 // ***** Question 6 *****
 // *** Uncomment the lines below to test
@@ -99,7 +124,10 @@ function myMap(array, callback) {
 
 // ***** Callbacks - Question 1 *****
 
-// *** Uncomment the lines below to test
+function triple(num) {
+  return num * 3
+}
+// // *** Uncomment the lines below to test
 // console.log("%cCallbacks - Question 1", "color: red")
 
 // console.log(myMap([1,2,3,4,5], triple)) 
@@ -112,6 +140,10 @@ function myMap(array, callback) {
 
 // ***** Callbacks - Question 2 *****
 // *** Uncomment the lines below to test
+
+function greet(name) {
+  return `Hi ${name}`
+}
 // console.log("%cCallbacks - Question 2", "color: red")
 
 // console.log(myMap(["Raffy", "Chase"], greet)) 
@@ -139,26 +171,31 @@ const line = []
 
 // ***** Scope & Closures - Question 1 *****
 
+let ticket = 0
 
-// *** Uncomment the lines below to test
-// console.log("%cScope & Closures - Question 1", "color: red")
+function takeATicketNumber(line) {
+  ticket += 1
+  line.push(ticket)
+  return `Welcome. You're ticket number ${ticket}`
+}
+console.log("%cScope & Closures - Question 1", "color: red")
 
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 1`
+console.log(takeATicketNumber(line))
+// => `Welcome. You are ticket number 1`
 
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 2`
+console.log(takeATicketNumber(line))
+// => `Welcome. You are ticket number 2`
 
-// console.log(nowServing(line))
-// // => `Currently serving 1.`
+console.log(nowServing(line))
+// => `Currently serving 1.`
 
-// console.log(nowServing(line))
-// // => `Currently serving 2.`
+console.log(nowServing(line))
+// => `Currently serving 2.`
 
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 3`
+console.log(takeATicketNumber(line))
+// => `Welcome. You are ticket number 3`
 
-// console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red") 
 
 // ***** Scope & Closures - Question 2 *****
 // *** Uncomment the lines below to test
