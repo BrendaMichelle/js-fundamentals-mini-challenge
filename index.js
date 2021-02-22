@@ -2,6 +2,9 @@
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 1", "color: red") 
 
+let counter = 1;
+counter = 2;
+
 // console.log(counter) 
 // // => 2
 // console.log("%c----------", "color: red") 
@@ -12,6 +15,8 @@
 // *** after testing, comment the line causing the error back in 
 // *** otherwise, the error will stop the rest of your code from running
 // console.log("%cQuestion 2", "color: red") 
+
+const NAME = "James Yu";
 
 // console.log(name)
 // => "Raffy"
@@ -25,6 +30,14 @@
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 3", "color: red") 
 
+function drinkWater(currentThirstLevel) {
+  console.log("Man I sure am thirsty")
+  currentThirstLevel -= 1
+  console.log("Ahh that hits the spot")
+  return currentThirstLevel
+}
+
+
 // console.log(drinkWater(12))
 // // => "Man I sure am thirsty"
 // // => "Ahh that hits the spot"
@@ -36,6 +49,12 @@
 // ***** Question 4 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 4", "color: red") 
+
+function sameSameButDifferent(num, maybeNum) {
+  if (num === maybeNum) { console.log ("same same")}
+  else if ( num == maybeNum) { console.log ("same same (but different)")}
+  else { console.log ("different")}
+}
 
 // console.log(sameSameButDifferent(5, 5)) 
 // // => "same same"
@@ -55,9 +74,15 @@
 // ***** Question 5 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 5", "color: red")
+
+function updateGrade(student, grade) {
+  student.grade = grade
+}
 // const student1 = { name: "Duane", grade: 88 }
 // updateGrade(student1, 92)
 // console.log(student1)
+
+
 // // => { name: "Duane", grade: 92 }
 // console.log("%c----------", "color: red")
 
@@ -66,6 +91,14 @@
 // ***** Question 6 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 6", "color: red")
+
+function printNameAndPhones(users) {
+  users.forEach(function(user_hash) {
+    console.log(user_hash["name"])
+    console.log(`Cell: ${user_hash["phones"]["cell"]}`)
+    console.log(`Office: ${user_hash["phones"]["office"]}`)
+  })
+}
 
 // const users = [ 
 //   { 
@@ -102,8 +135,12 @@ function myMap(array, callback) {
 // *** Uncomment the lines below to test
 // console.log("%cCallbacks - Question 1", "color: red")
 
+function triple(x) {
+  return x * 3
+}
+
 // console.log(myMap([1,2,3,4,5], triple)) 
-// // => [3,6,9,12,15]
+// // // => [3,6,9,12,15]
 
 // console.log(myMap([2,4,6,8], triple))   
 // // => [6,12,18,24]
@@ -113,6 +150,10 @@ function myMap(array, callback) {
 // ***** Callbacks - Question 2 *****
 // *** Uncomment the lines below to test
 // console.log("%cCallbacks - Question 2", "color: red")
+
+function greet(name) {
+  return `Hi, ${name}!`
+}
 
 // console.log(myMap(["Raffy", "Chase"], greet)) 
 // // => ["Hi, Raffy!", "Hi, Chase!"]
@@ -139,6 +180,12 @@ const line = []
 
 // ***** Scope & Closures - Question 1 *****
 
+let ticketNum = 1
+function takeATicketNumber(line) {
+  line.push(ticketNum)
+  ticketNum++
+  return `Welcome. You are ticket number ${line.length}`
+}
 
 // *** Uncomment the lines below to test
 // console.log("%cScope & Closures - Question 1", "color: red")
