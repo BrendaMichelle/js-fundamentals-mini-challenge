@@ -181,6 +181,7 @@ const line = []
 // ***** Scope & Closures - Question 1 *****
 
 let ticketNum = 1
+
 function takeATicketNumber(line) {
   line.push(ticketNum)
   ticketNum++
@@ -209,6 +210,18 @@ function takeATicketNumber(line) {
 
 // ***** Scope & Closures - Question 2 *****
 // *** Uncomment the lines below to test
+
+function ticketNumberGeneratorFunc() {
+  let current_num = 1
+  let current_line = []
+
+  function takeATicketNumber(current_line) {
+    current_line.push(current_num)
+    console.log(`Welcome. You are ticket number ${current_line.length}`)
+    current_num++
+  }
+  return takeATicketNumber
+}
 // console.log("%cScope & Closures - Question 2", "color: red")
 
 // const newLine = []
