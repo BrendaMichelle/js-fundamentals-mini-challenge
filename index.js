@@ -204,18 +204,20 @@ console.log("%c----------", "color: red")
 // ***** Scope & Closures - Question 2 *****
 // *** Uncomment the lines below to test
 
-var ticketNumberNew = 1
-function ticketNumberGeneratorFunc(){
-  return takeATicketNumber(newLine)
-  // newLine.push(ticketNumberNew); 
-  // var message = "Welcome. You are ticket number " + ticketNumberNew
-  // ticketNumberNew++;
-  // return message
-}
+ ticketNumber = 1
+// function ticketNumberGeneratorFunc(){
+//   return takeATicketNumber(newLine)
+//   newLine.push(ticketNumberNew); 
+//   var message = "Welcome. You are ticket number " + ticketNumberNew
+//   ticketNumberNew++;
+//   return message
+// }
 console.log("%cScope & Closures - Question 2", "color: red")
 
 const newLine = []
-const takeATicketNumberFunc = ticketNumberGeneratorFunc()
+const takeATicketNumberFunc = function ticketNumberGeneratorFunc(newLine){
+  return takeATicketNumber(newLine);
+}
 console.log(takeATicketNumberFunc(newLine))
 // => `Welcome. You are ticket number 1`
 
