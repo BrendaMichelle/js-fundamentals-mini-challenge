@@ -6,6 +6,10 @@
 // // => 2
 // console.log("%c----------", "color: red") 
 
+let counter =1
+counter = 2
+
+
 
 // ***** Question 2 *****
 // *** Uncomment the lines below to test
@@ -13,11 +17,15 @@
 // *** otherwise, the error will stop the rest of your code from running
 // console.log("%cQuestion 2", "color: red") 
 
+
+
 // console.log(name)
 // => "Raffy"
 // name = "Not Raffy" 
 // => TypeError
 // console.log("%c----------", "color: red") 
+
+const name = `michael`
 
 
 
@@ -31,7 +39,12 @@
 // // => 11
 // console.log("%c----------", "color: red") 
 
-
+function drinkWater(currentThirstLevel) {
+  console.log(`Man I sure am thirsty`)
+  currentThirstLevel -= 1
+  console.log(`Ahh that hits the spot`)
+  return currentThirstLevel
+}
 
 // ***** Question 4 *****
 // *** Uncomment the lines below to test
