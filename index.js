@@ -1,4 +1,7 @@
 // ***** Question 1 *****
+
+let counter = 1
+counter = 2 
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 1", "color: red") 
 
@@ -8,6 +11,10 @@
 
 
 // ***** Question 2 *****
+
+const name = "Patrick"
+// name = "Mike"
+
 // *** Uncomment the lines below to test
 // *** after testing, comment the line causing the error back in 
 // *** otherwise, the error will stop the rest of your code from running
@@ -22,6 +29,14 @@
 
 
 // ***** Question 3 *****
+
+function drinkWater(currentThirstLevel) {
+  console.log("Man I sure am thirsty")
+  currentThirstLevel -= 1
+  console.log("Ahh that hit the spot")
+  return currentThirstLevel
+}
+
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 3", "color: red") 
 
@@ -34,6 +49,18 @@
 
 
 // ***** Question 4 *****
+function sameSameButDifferent(num, maybeNum) {
+  if (num === maybeNum) {
+    return "same same"
+  }
+  else if (num == maybeNum) {
+    return "same same (but different)"
+  }
+  else {
+    return "different"
+  }
+  
+}
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 4", "color: red") 
 
@@ -53,9 +80,12 @@
 
 
 // ***** Question 5 *****
+function updateGrade(student, grade) {
+  student.grade = grade
+}
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 5", "color: red")
-// const student1 = { name: "Duane", grade: 88 }
+const student1 = { name: "Duane", grade: 88 }
 // updateGrade(student1, 92)
 // console.log(student1)
 // // => { name: "Duane", grade: 92 }
@@ -64,17 +94,24 @@
 
 
 // ***** Question 6 *****
+function printNameAndPhones(users) {
+  users.forEach(function(u){
+    console.log(u.name)
+    console.log(`Cell: ${u.phones.cell}`)
+    console.log(`Office: ${u.phones.office}`)
+  })
+}
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 6", "color: red")
 
-// const users = [ 
-//   { 
-//     name: "Duane", phones: { cell: "555-123-4567", office: "555-456-7890" }
-//   },
-//   { 
-//     name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
-//   }
-// ]
+const users = [ 
+  { 
+    name: "Duane", phones: { cell: "555-123-4567", office: "555-456-7890" }
+  },
+  { 
+    name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
+  }
+]
 // printNameAndPhones(users)
 // // => "Duane"
 // => "Cell: 555-123-4567"
@@ -98,6 +135,9 @@ function myMap(array, callback) {
 }
 
 // ***** Callbacks - Question 1 *****
+function triple(x) {
+  return x * 3
+}
 
 // *** Uncomment the lines below to test
 // console.log("%cCallbacks - Question 1", "color: red")
@@ -111,6 +151,9 @@ function myMap(array, callback) {
 
 
 // ***** Callbacks - Question 2 *****
+function greet(name) {
+  return `Hi, ${name}!`
+}
 // *** Uncomment the lines below to test
 // console.log("%cCallbacks - Question 2", "color: red")
 
@@ -139,7 +182,13 @@ const line = []
 
 // ***** Scope & Closures - Question 1 *****
 
+let ticNum = 0
 
+function takeATicketNumber(line){
+  ticNum += 1
+  line.push(ticNum)
+  return `Welcome. you are ticket number ${ticNum}`
+}
 // *** Uncomment the lines below to test
 // console.log("%cScope & Closures - Question 1", "color: red")
 
@@ -161,6 +210,16 @@ const line = []
 // console.log("%c----------", "color: red") 
 
 // ***** Scope & Closures - Question 2 *****
+
+function ticketNumberGeneratorFunc(){
+  let num = 0
+  return function (line) {
+    num += 1
+    line.push(num)
+    return `Welcome. you are ticket number ${num}`
+  }
+}
+
 // *** Uncomment the lines below to test
 // console.log("%cScope & Closures - Question 2", "color: red")
 
