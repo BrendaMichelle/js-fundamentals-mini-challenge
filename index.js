@@ -3,35 +3,43 @@
 // console.log("%cQuestion 1", "color: red") 
 
 // console.log(counter) 
-// // => 2
-// console.log("%c----------", "color: red") 
+// => 2
+console.log("%c----------", "color: red") 
 
+console.log("%cQuestion 1", "color: red") 
+counter = 1
+counter = 2
+console.log(counter)
 
 // ***** Question 2 *****
 // *** Uncomment the lines below to test
 // *** after testing, comment the line causing the error back in 
 // *** otherwise, the error will stop the rest of your code from running
-// console.log("%cQuestion 2", "color: red") 
+console.log("%cQuestion 2", "color: red") 
+const name = "Kwaku"
 
 // console.log(name)
 // => "Raffy"
 // name = "Not Raffy" 
 // => TypeError
-// console.log("%c----------", "color: red") 
+ console.log("%c----------", "color: red") 
 
 
 
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 3", "color: red") 
-
-// console.log(drinkWater(12))
-// // => "Man I sure am thirsty"
-// // => "Ahh that hits the spot"
-// // => 11
-// console.log("%c----------", "color: red") 
 
 
+console.log("%cQuestion 3", "color: red") 
+
+function drinkWater(thirst) {
+  console.log("Man I sure am thristy")
+  thirst -= 1
+  console.log("Ahh that hits the spot")
+  return thirst
+}
+console.log(drinkWater(12))
+console.log("%c----------", "color: red"
 
 // ***** Question 4 *****
 // *** Uncomment the lines below to test
@@ -50,7 +58,21 @@
 // // => "different"
 // console.log("%c----------", "color: red") 
 
-
+function sameSameButDifferent(num, maybeNum) {
+  if (num === maybeNum) {
+    console.log("same same")
+  }
+  else if (num == maybeNum) {
+    console.log("same same (but different)")
+  }
+  else {
+    console.log("different")
+  }
+}
+console.log(sameSameButDifferent(5, 5)) 
+console.log(sameSameButDifferent(123, "123")) 
+console.log(sameSameButDifferent(5, 7)) 
+console.log(sameSameButDifferent(123, "122")) 
 
 // ***** Question 5 *****
 // *** Uncomment the lines below to test
