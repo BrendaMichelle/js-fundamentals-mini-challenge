@@ -31,18 +31,18 @@ const name = `michael`
 
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 3", "color: red") 
+console.log("%cQuestion 3", "color: red") 
 
-// console.log(drinkWater(12))
-// // => "Man I sure am thirsty"
-// // => "Ahh that hits the spot"
-// // => 11
-// console.log("%c----------", "color: red") 
+console.log(drinkWater(12))
+// => "Man I sure am thirsty"
+// => "Ahh that hits the spot"
+// => 11
+console.log("%c----------", "color: red") 
 
 function drinkWater(currentThirstLevel) {
-  console.log(`Man I sure am thirsty`)
-  currentThirstLevel -= 1
-  console.log(`Ahh that hits the spot`)
+  console.log("Man I sure am thirsty");
+  currentThirstLevel -= 1;
+  console.log("Ahh that hits the spot");
   return currentThirstLevel
 }
 
@@ -62,6 +62,16 @@ function drinkWater(currentThirstLevel) {
 // console.log(sameSameButDifferent(123, "122")) 
 // // => "different"
 // console.log("%c----------", "color: red") 
+
+function sameSameButDifferent(num, maybeNum) {
+  if(num === maybeNum){
+  return "same same";
+} elsif (num == maybeNum){
+      return "same same (but different)";
+    } else{
+    return "different"
+  }
+}
 
 
 
@@ -194,4 +204,4 @@ const line = []
 // console.log(takeATicketNumberFunc(newLine))
 // // => `Welcome. You are ticket number 3`
 
-// console.log("%c----------", "color: red") 
+// console.log("%c----------", "color: red")
