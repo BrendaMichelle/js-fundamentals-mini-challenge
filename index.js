@@ -1,9 +1,9 @@
 // ***** Question 1 *****
 // *** Uncomment the lines below to test
 
-var counter = 1;
+let counter = 1;
 
-var counter = 2;
+counter = 2;
 
 console.log("%cQuestion 1", "color: red") 
 
@@ -102,8 +102,8 @@ function printNameAndPhones(users) {
 
 function iterate(hash) {
   console.log(hash.name);
-  console.log(hash.phones.cell);
-  console.log(hash.phones.office);
+  console.log(`Cell: ${hash.phones.cell}`);
+  console.log(`Office: ${hash.phones.office}`);
 }
 
 const users = [ 
