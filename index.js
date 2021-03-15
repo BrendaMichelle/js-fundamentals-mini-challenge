@@ -89,8 +89,8 @@ console.log("%c----------", "color: red")
 function printNameAndPhones(users) {
   users.forEach(function(user) {
     console.log(user.name)
-    console.log(user.phones.cell)
-    console.log(user.phones.office)
+    console.log(`Cell: ${user.phones.cell}`)
+    console.log(`Office: ${user.phones.office}`)
   }) 
 }
 console.log("%cQuestion 6", "color: red")
@@ -175,8 +175,9 @@ const line = []
 
 
 // *** Uncomment the lines below to test
+let i = 0
 function takeATicketNumber(line) {
-  let i = line.length + 1
+  i ++
   line.push(i)
   return `Welcome. You are ticket number ${i}`
 }
@@ -201,24 +202,32 @@ console.log("%c----------", "color: red")
 
 // ***** Scope & Closures - Question 2 *****
 // *** Uncomment the lines below to test
-function ticketNumberGeneratorFunc
-// console.log("%cScope & Closures - Question 2", "color: red")
+function ticketNumberGeneratorFunc() {
+  let i = 0
+function takeATicketNumber(line) {
+  i ++
+  line.push(i)
+  return `Welcome. You are ticket number ${i}`
+}
+  return takeATicketNumber
+}
+console.log("%cScope & Closures - Question 2", "color: red")
 
-// const newLine = []
-// const takeATicketNumberFunc = ticketNumberGeneratorFunc()
-// console.log(takeATicketNumberFunc(newLine))
-// // => `Welcome. You are ticket number 1`
+const newLine = []
+const takeATicketNumberFunc = ticketNumberGeneratorFunc()
+console.log(takeATicketNumberFunc(newLine))
+// => `Welcome. You are ticket number 1`
 
-// console.log(takeATicketNumberFunc(newLine))
-// // => `Welcome. You are ticket number 2`
+console.log(takeATicketNumberFunc(newLine))
+// => `Welcome. You are ticket number 2`
 
-// console.log(nowServing(newLine))
-// // => `Currently serving 1.`
+console.log(nowServing(newLine))
+// => `Currently serving 1.`
 
-// console.log(nowServing(newLine))
-// // => `Currently serving 2.`
+console.log(nowServing(newLine))
+// => `Currently serving 2.`
 
-// console.log(takeATicketNumberFunc(newLine))
-// // => `Welcome. You are ticket number 3`
+console.log(takeATicketNumberFunc(newLine))
+// => `Welcome. You are ticket number 3`
 
-// console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red") 
