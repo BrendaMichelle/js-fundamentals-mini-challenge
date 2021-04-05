@@ -171,15 +171,17 @@ const line = []
 
 // ***** Scope & Closures - Question 1 *****
 
+
+// *** Uncomment the lines below to test
+console.log("%cScope & Closures - Question 1", "color: red")
+
+
 let ticket = 1
 const takeATicketNumber = lineArray => {
   console.log(`Welcome. You are ticket number ${ticket}`)
   lineArray.push(ticket)
   ticket ++ 
 }
-
-// *** Uncomment the lines below to test
-console.log("%cScope & Closures - Question 1", "color: red")
 
 console.log(takeATicketNumber(line))
 // => `Welcome. You are ticket number 1`
@@ -200,23 +202,33 @@ console.log("%c----------", "color: red")
 
 // ***** Scope & Closures - Question 2 *****
 // *** Uncomment the lines below to test
-// console.log("%cScope & Closures - Question 2", "color: red")
+console.log("%cScope & Closures - Question 2", "color: red")
 
-// const newLine = []
-// const takeATicketNumberFunc = ticketNumberGeneratorFunc()
-// console.log(takeATicketNumberFunc(newLine))
-// // => `Welcome. You are ticket number 1`
+const ticketNumberGeneratorFunc = () => {
+  let ticketNumber = lineArray[-1] || 1
+  const takeATicketNumber = (lineArray) => {
+    console.log(`Welcome. You are ticket number ${ticketNumber}`)
+    lineArray.push(ticketNumber)
+  }
+  ticketNumber ++
+  return takeATicketNumber
+}
 
-// console.log(takeATicketNumberFunc(newLine))
-// // => `Welcome. You are ticket number 2`
+const newLine = []
+const takeATicketNumberFunc = ticketNumberGeneratorFunc()
+console.log(takeATicketNumberFunc(newLine))
+// => `Welcome. You are ticket number 1`
 
-// console.log(nowServing(newLine))
-// // => `Currently serving 1.`
+console.log(takeATicketNumberFunc(newLine))
+// => `Welcome. You are ticket number 2`
 
-// console.log(nowServing(newLine))
-// // => `Currently serving 2.`
+console.log(nowServing(newLine))
+// => `Currently serving 1.`
 
-// console.log(takeATicketNumberFunc(newLine))
-// // => `Welcome. You are ticket number 3`
+console.log(nowServing(newLine))
+// => `Currently serving 2.`
 
-// console.log("%c----------", "color: red") 
+console.log(takeATicketNumberFunc(newLine))
+// => `Welcome. You are ticket number 3`
+
+console.log("%c----------", "color: red") 
