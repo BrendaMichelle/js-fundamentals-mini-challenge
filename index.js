@@ -26,11 +26,11 @@ console.log("%c----------", "color: red")
 // *** Uncomment the lines below to test
 console.log("%cQuestion 3", "color: red") 
 
-const drinkWater = (num) => {
+const drinkWater = currentThirstLevel => {
   console.log("Man I sure am thirsty")
-  num --
+  currentThirstLevel --
   console.log("Ahh that hits the spot")
-  return num
+  return currentThirstLevel
 }
 
 console.log(drinkWater(12))
@@ -45,11 +45,25 @@ console.log("%c----------", "color: red")
 // *** Uncomment the lines below to test
 console.log("%cQuestion 4", "color: red") 
 
+
 const sameSameButDifferent = (num, maybeNum) => {
   if (num === maybeNum) {return "same same"}
   else if (num == maybeNum) {return "same same (but different)"}
-  else if (num != maybeNum || num !== maybeNum) {return "different"}
+  else {return "different"}
 }
+
+// * The solution below more literally fits the directions  *
+// const sameSameButDifferent = (num, maybeNum) => {
+//   if ((typeof(num) && typeof(maybeNum)) == "number" && num === maybeNum){
+//     return "same same"
+//   }
+//   else if ((typeof(num) != typeof(maybeNum)) && parseFloat(num) === parseFloat(maybeNum)) {
+//     return "same same (but different)"
+//   }
+//   else{
+//     return "different"
+//   }
+// }
 
 console.log(sameSameButDifferent(5, 5)) 
 // => "same same"
@@ -205,12 +219,12 @@ console.log("%c----------", "color: red")
 console.log("%cScope & Closures - Question 2", "color: red")
 
 const ticketNumberGeneratorFunc = () => {
-  let ticketNumber = lineArray[-1] || 1
   const takeATicketNumber = (lineArray) => {
+    let ticketNumber = (lineArray[-1] || 0)
+    ticketNumber ++
     console.log(`Welcome. You are ticket number ${ticketNumber}`)
     lineArray.push(ticketNumber)
   }
-  ticketNumber ++
   return takeATicketNumber
 }
 
