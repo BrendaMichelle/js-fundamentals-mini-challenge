@@ -24,13 +24,20 @@ console.log("%c----------", "color: red")
 
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 3", "color: red") 
+console.log("%cQuestion 3", "color: red") 
 
-// console.log(drinkWater(12))
-// // => "Man I sure am thirsty"
-// // => "Ahh that hits the spot"
-// // => 11
-// console.log("%c----------", "color: red") 
+const drinkWater = (num) => {
+  console.log("Man I sure am thirsty")
+  num --
+  console.log("Ahh that hits the spot")
+  return num
+}
+
+console.log(drinkWater(12))
+// => "Man I sure am thirsty"
+// => "Ahh that hits the spot"
+// => 11
+console.log("%c----------", "color: red") 
 
 
 
