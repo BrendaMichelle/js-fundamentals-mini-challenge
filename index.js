@@ -12,13 +12,13 @@ console.log("%c----------", "color: red")
 // *** Uncomment the lines below to test
 // *** after testing, comment the line causing the error back in 
 // *** otherwise, the error will stop the rest of your code from running
-// console.log("%cQuestion 2", "color: red") 
-
-// console.log(name)
+console.log("%cQuestion 2", "color: red") 
+const name = "Diana"
+console.log(name)
 // => "Raffy"
 // name = "Not Raffy" 
 // => TypeError
-// console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red") 
 
 
 
