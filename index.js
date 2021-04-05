@@ -190,11 +190,11 @@ const line = []
 console.log("%cScope & Closures - Question 1", "color: red")
 
 
-let ticket = 1
+let ticket = 0
 const takeATicketNumber = lineArray => {
-  console.log(`Welcome. You are ticket number ${ticket}`)
-  lineArray.push(ticket)
   ticket ++ 
+  lineArray.push(ticket)
+  return `Welcome. You are ticket number ${ticket}`
 }
 
 console.log(takeATicketNumber(line))
@@ -219,16 +219,17 @@ console.log("%c----------", "color: red")
 console.log("%cScope & Closures - Question 2", "color: red")
 
 const ticketNumberGeneratorFunc = () => {
+  let ticketNumber = 0
   const takeATicketNumber = (lineArray) => {
-    let ticketNumber = (lineArray[-1] || 0)
     ticketNumber ++
-    console.log(`Welcome. You are ticket number ${ticketNumber}`)
     lineArray.push(ticketNumber)
+    return `Welcome. You are ticket number ${ticketNumber}`
   }
   return takeATicketNumber
 }
 
 const newLine = []
+
 const takeATicketNumberFunc = ticketNumberGeneratorFunc()
 console.log(takeATicketNumberFunc(newLine))
 // => `Welcome. You are ticket number 1`
