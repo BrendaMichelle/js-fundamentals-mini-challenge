@@ -68,12 +68,18 @@ console.log("%c----------", "color: red")
 
 // ***** Question 5 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 5", "color: red")
-// const student1 = { name: "Duane", grade: 88 }
-// updateGrade(student1, 92)
-// console.log(student1)
-// // => { name: "Duane", grade: 92 }
-// console.log("%c----------", "color: red")
+console.log("%cQuestion 5", "color: red")
+const student1 = { name: "Duane", grade: 88 }
+
+const updateGrade = (student, grade) => {
+  student.grade = grade
+  return student
+}
+
+updateGrade(student1, 92)
+console.log(student1)
+// => { name: "Duane", grade: 92 }
+console.log("%c----------", "color: red")
 
 
 
