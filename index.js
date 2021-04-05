@@ -102,24 +102,33 @@ console.log("%c----------", "color: red")
 
 // ***** Question 6 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 6", "color: red")
+console.log("%cQuestion 6", "color: red")
 
-// const users = [ 
-//   { 
-//     name: "Duane", phones: { cell: "555-123-4567", office: "555-456-7890" }
-//   },
-//   { 
-//     name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
-//   }
-// ]
-// printNameAndPhones(users)
+function printNameAndPhones(users) {
+  for (let i =0; i < users.length; i ++) {
+    console.log(users[i].name)
+    console.log("cell: " + users[i].phones.cell)
+    console.log("office: " + users[i].phones.office)
+  }
+}
+
+const users = [ 
+  { 
+    name: "Duane", phones: { cell: "555-123-4567", office: "555-456-7890" }
+  },
+  { 
+    name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
+  }
+]
+printNameAndPhones(users)
+
 // // => "Duane"
 // => "Cell: 555-123-4567"
 // => "Office: 555-456-7890"
 // => "Liza"
 // => "Cell: 555-234-5678"
 // => "Office: 555-567-1234"
-// console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red") 
 
 
 // ***** Callbacks *****
