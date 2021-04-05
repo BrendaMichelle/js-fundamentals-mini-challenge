@@ -1,88 +1,125 @@
 // ***** Question 1 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 1", "color: red") 
+var counter = 1
+console.log("%cQuestion 1", "color: red") 
+console.log(counter) 
 
-// console.log(counter) 
-// // => 2
-// console.log("%c----------", "color: red") 
+
+// => 2
+var counter = 2
+console.log(counter)
+console.log("%c----------", "color: red") 
 
 
 // ***** Question 2 *****
 // *** Uncomment the lines below to test
 // *** after testing, comment the line causing the error back in 
 // *** otherwise, the error will stop the rest of your code from running
-// console.log("%cQuestion 2", "color: red") 
+console.log("%cQuestion 2", "color: red") 
 
-// console.log(name)
+
+const name = 'Henry Velasquez'
+console.log(name)   // WHY DOES NAME HAVE A STRIKETHROUGH?
 // => "Raffy"
-// name = "Not Raffy" 
+
 // => TypeError
-// console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red") 
 
 
 
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 3", "color: red") 
+console.log("%cQuestion 3", "color: red") 
 
-// console.log(drinkWater(12))
+function drinkWater(currentThirstLevel) { 
+  console.log("Man I sure am thirsty")
+  currentThirstLevel -= 1
+  console.log( 'Ahh that hits the spot' )
+  return currentThirstLevel
+}
+ console.log(drinkWater(12))
 // // => "Man I sure am thirsty"
 // // => "Ahh that hits the spot"
 // // => 11
-// console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red") 
 
 
 
 // ***** Question 4 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 4", "color: red") 
+console.log("%cQuestion 4", "color: red") 
 
-// console.log(sameSameButDifferent(5, 5)) 
-// // => "same same"
+function sameSameButDifferent(num, maybeNum) {
+  if (num === maybeNum) {
+    console.log('same same')
+  } else if (num === parseInt(maybeNum, 10)) {
+    console.log( 'same same but different' ) //DO I PUT SPACES OR NO?
+  } else {
+    console.log('different')
+  }
+}
 
-// console.log(sameSameButDifferent(123, "123")) 
-// // => "same same (but different)"
+console.log(sameSameButDifferent(5, 5)) 
+// => "same same"
 
-// console.log(sameSameButDifferent(5, 7)) 
-// // => "different"
+console.log(sameSameButDifferent(123, "123")) 
+// => "same same (but different)"
 
-// console.log(sameSameButDifferent(123, "122")) 
-// // => "different"
-// console.log("%c----------", "color: red") 
+console.log(sameSameButDifferent(5, 7)) 
+// => "different"
+
+console.log(sameSameButDifferent(123, "122")) 
+// => "different"
+console.log("%c----------", "color: red") 
 
 
 
 // ***** Question 5 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 5", "color: red")
-// const student1 = { name: "Duane", grade: 88 }
-// updateGrade(student1, 92)
-// console.log(student1)
+console.log("%cQuestion 5", "color: red")
+
+function updateGrade(student, grade) {
+  student['grade'] = grade   // WHAT EXACTLY IS THE CORRECT JSON OBJECT NOTATION. I TRIED [grade:] and [:grade] and they did not work
+}
+const student1 = { name: "Duane", grade: 88 }
+updateGrade(student1, 92)
+console.log(student1)  
 // // => { name: "Duane", grade: 92 }
-// console.log("%c----------", "color: red")
+console.log("%c----------", "color: red")
 
 
 
 // ***** Question 6 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 6", "color: red")
+console.log("%cQuestion 6", "color: red")
 
-// const users = [ 
-//   { 
-//     name: "Duane", phones: { cell: "555-123-4567", office: "555-456-7890" }
-//   },
-//   { 
-//     name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
-//   }
-// ]
-// printNameAndPhones(users)
+
+function printNameAndPhones(users) {
+  users.forEach(function (e) {
+    console.log(e.name);
+    console.log(`Cell: ${e.phones['cell']}`);
+    console.log(`Office: ${e.phones['office']}`);
+  }
+  )
+}
+
+
+const users = [ 
+  { 
+    name: "Duane", phones: { cell: "555-123-4567", office: "555-456-7890" }
+  },
+  { 
+    name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
+  }
+]
+printNameAndPhones(users)
 // // => "Duane"
 // => "Cell: 555-123-4567"
 // => "Office: 555-456-7890"
 // => "Liza"
 // => "Cell: 555-234-5678"
 // => "Office: 555-567-1234"
-// console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red") 
 
 
 // ***** Callbacks *****
@@ -98,26 +135,32 @@ function myMap(array, callback) {
 }
 
 // ***** Callbacks - Question 1 *****
+function triple(number) {
+  return number * 3
+}
 
 // *** Uncomment the lines below to test
-// console.log("%cCallbacks - Question 1", "color: red")
+console.log("%cCallbacks - Question 1", "color: red")
 
-// console.log(myMap([1,2,3,4,5], triple)) 
+console.log(myMap([1,2,3,4,5], triple)) 
 // // => [3,6,9,12,15]
 
-// console.log(myMap([2,4,6,8], triple))   
+console.log(myMap([2,4,6,8], triple))   
 // // => [6,12,18,24]
-// console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red")
 
 
 // ***** Callbacks - Question 2 *****
 // *** Uncomment the lines below to test
-// console.log("%cCallbacks - Question 2", "color: red")
+console.log("%cCallbacks - Question 2", "color: red")
 
-// console.log(myMap(["Raffy", "Chase"], greet)) 
+function greet(name) {
+  return `Hi, ${name}!`
+}
+
+console.log(myMap(["Raffy", "Chase"], greet)) 
 // // => ["Hi, Raffy!", "Hi, Chase!"]
-// console.log("%c----------", "color: red") 
-
+console.log("%c----------", "color: red") 
 
 
 // ***** Scope & Closures *****
