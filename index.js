@@ -1,44 +1,58 @@
 // ***** Question 1 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 1", "color: red") 
-
-// console.log(counter) 
-// // => 2
-// console.log("%c----------", "color: red") 
+console.log("%cQuestion 1", "color: red") 
+var counter = 1;
+var counter = 2;
+console.log(counter) 
+ // => 2
+console.log("%c----------", "color: red") 
 
 
 // ***** Question 2 *****
 // *** Uncomment the lines below to test
 // *** after testing, comment the line causing the error back in 
 // *** otherwise, the error will stop the rest of your code from running
-// console.log("%cQuestion 2", "color: red") 
-
-// console.log(name)
+console.log("%cQuestion 2", "color: red") 
+const name = "Raffy"
+console.log(name)
 // => "Raffy"
 // name = "Not Raffy" 
 // => TypeError
-// console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red") 
 
 
 
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 3", "color: red") 
+console.log("%cQuestion 3", "color: red") 
 
+var phrase = (`Man I sure am thirsty`)
+var secondPhrase = ('Ahh that hits the spot')
+
+function drinkWater(currentThirstLevel) {
+  for (let i = 0; i < currentThirstLevel; --i){
+    return phrase = (`Man I sure am thirsty`)
+  }
+}
+console.log(drinkWater(12))
 // console.log(drinkWater(12))
-// // => "Man I sure am thirsty"
-// // => "Ahh that hits the spot"
-// // => 11
-// console.log("%c----------", "color: red") 
+// => "Man I sure am thirsty"
+// => "Ahh that hits the spot"
+// => 11
+console.log("%c----------", "color: red") 
 
 
 
 // ***** Question 4 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 4", "color: red") 
+console.log("%cQuestion 4", "color: red") 
 
-// console.log(sameSameButDifferent(5, 5)) 
-// // => "same same"
+function sameSameButDifferent(num, maybeNum){
+  
+}
+
+console.log(sameSameButDifferent(5, 5)) 
+ // => "same same"
 
 // console.log(sameSameButDifferent(123, "123")) 
 // // => "same same (but different)"
@@ -48,18 +62,23 @@
 
 // console.log(sameSameButDifferent(123, "122")) 
 // // => "different"
-// console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red") 
 
 
 
 // ***** Question 5 *****
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 5", "color: red")
-// const student1 = { name: "Duane", grade: 88 }
-// updateGrade(student1, 92)
-// console.log(student1)
+console.log("%cQuestion 5", "color: red")
+const student1 = { name: "Duane", grade: 88 }
+updateGrade(student1, 92)
+
+function updateGrade(student, grade) {
+
+}
+
+console.log(student1)
 // // => { name: "Duane", grade: 92 }
-// console.log("%c----------", "color: red")
+console.log("%c----------", "color: red")
 
 
 
