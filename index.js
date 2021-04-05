@@ -215,11 +215,28 @@ console.log("%c----------", "color: red")
 
 
 // *** Uncomment the lines below to test
+
+const x = function takeATicketNumber(line) {
+  ticket += 1
+  line.push(ticket)
+  return `Welcome. You are ticket number ${ticket}`
+}
+
 console.log("%cScope & Closures - Question 2", "color: red")
 
+function ticketNumberGeneratorFunc() {
+  let ticket = 0
+
+  return function (line) {
+    ticket += 1
+    line.push(ticket)
+    return `Welcome. You are ticket number ${ticket}`
+  }
+}
 
 const newLine = []
 const takeATicketNumberFunc = ticketNumberGeneratorFunc()
+
 console.log(takeATicketNumberFunc(newLine))
 // => `Welcome. You are ticket number 1`
 
