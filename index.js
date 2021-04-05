@@ -1,7 +1,9 @@
 // ***** Question 1 *****
-// *** Uncomment the lines below to test
+let counter = 1
+
 // console.log("%cQuestion 1", "color: red") 
 
+counter = 2
 // console.log(counter) 
 // // => 2
 // console.log("%c----------", "color: red") 
@@ -12,7 +14,7 @@
 // *** after testing, comment the line causing the error back in 
 // *** otherwise, the error will stop the rest of your code from running
 // console.log("%cQuestion 2", "color: red") 
-
+const name = "Andre"
 // console.log(name)
 // => "Raffy"
 // name = "Not Raffy" 
@@ -24,6 +26,13 @@
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 3", "color: red") 
+function drinkWater(currentThirstLevel)
+{
+  console.log("Man I sure am thirsty")
+  currentThirstLevel--
+  console.log("Ahh that hits the spot")
+  return currentThirstLevel
+}
 
 // console.log(drinkWater(12))
 // // => "Man I sure am thirsty"
@@ -35,6 +44,11 @@
 
 // ***** Question 4 *****
 // *** Uncomment the lines below to test
+
+function sameSameButDifferent(num, maybeNum)
+{
+
+}
 // console.log("%cQuestion 4", "color: red") 
 
 // console.log(sameSameButDifferent(5, 5)) 
@@ -54,6 +68,13 @@
 
 // ***** Question 5 *****
 // *** Uncomment the lines below to test
+
+function updateGrade(student, grade)
+{
+  student.grade = grade
+}
+
+
 // console.log("%cQuestion 5", "color: red")
 // const student1 = { name: "Duane", grade: 88 }
 // updateGrade(student1, 92)
@@ -65,6 +86,18 @@
 
 // ***** Question 6 *****
 // *** Uncomment the lines below to test
+
+function printNamesAndPhones(users)
+{
+  for( let i = 0; i < users.length; i++)
+  {
+    console.log(users[i].name)
+    console.log(users[i].phones.cell)
+    console.log(users[i].phones.office)
+  }
+}
+
+
 // console.log("%cQuestion 6", "color: red")
 
 // const users = [ 
@@ -100,6 +133,11 @@ function myMap(array, callback) {
 // ***** Callbacks - Question 1 *****
 
 // *** Uncomment the lines below to test
+
+function triple(element)
+{
+  return element*3
+}
 // console.log("%cCallbacks - Question 1", "color: red")
 
 // console.log(myMap([1,2,3,4,5], triple)) 
@@ -112,6 +150,10 @@ function myMap(array, callback) {
 
 // ***** Callbacks - Question 2 *****
 // *** Uncomment the lines below to test
+function greet(element)
+{
+  return "Hi, " + element
+}
 // console.log("%cCallbacks - Question 2", "color: red")
 
 // console.log(myMap(["Raffy", "Chase"], greet)) 
@@ -139,6 +181,13 @@ const line = []
 
 // ***** Scope & Closures - Question 1 *****
 
+let tickerNumber = 1
+
+function takeATicketNumber(line)
+{
+  console.log("welcome you are ticket number " + ticketNumber)
+  line.push(ticketNumber++)
+}
 
 // *** Uncomment the lines below to test
 // console.log("%cScope & Closures - Question 1", "color: red")
