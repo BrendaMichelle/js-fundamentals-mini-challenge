@@ -171,26 +171,32 @@ const line = []
 
 // ***** Scope & Closures - Question 1 *****
 
+let ticket = 1
+const takeATicketNumber = lineArray => {
+  console.log(`Welcome. You are ticket number ${ticket}`)
+  lineArray.push(ticket)
+  ticket ++ 
+}
 
 // *** Uncomment the lines below to test
-// console.log("%cScope & Closures - Question 1", "color: red")
+console.log("%cScope & Closures - Question 1", "color: red")
 
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 1`
+console.log(takeATicketNumber(line))
+// => `Welcome. You are ticket number 1`
 
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 2`
+console.log(takeATicketNumber(line))
+// => `Welcome. You are ticket number 2`
 
-// console.log(nowServing(line))
-// // => `Currently serving 1.`
+console.log(nowServing(line))
+// => `Currently serving 1.`
 
-// console.log(nowServing(line))
-// // => `Currently serving 2.`
+console.log(nowServing(line))
+// => `Currently serving 2.`
 
-// console.log(takeATicketNumber(line))
-// // => `Welcome. You are ticket number 3`
+console.log(takeATicketNumber(line))
+// => `Welcome. You are ticket number 3`
 
-// console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red") 
 
 // ***** Scope & Closures - Question 2 *****
 // *** Uncomment the lines below to test
