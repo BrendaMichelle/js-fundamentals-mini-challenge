@@ -1,6 +1,4 @@
-// Hi Michelle & Sean: I took a nap right after the lecture and woke up around 5:10 so I started the challenge pretty late. 
-// Had I started the challened on time would I have solved more questions? Maybe- Maybe not. There are some parts that still confuse
-//me(callBAck) and I need to revisited the lecture today. Anyway thank you you both. Im already worried that I might fail code challenge this time -.-
+
 
 
 // ***** Question 1 *****
@@ -100,12 +98,20 @@ const users = [
     name: "Liza", phones: { cell: "555-234-5678", office: "555-567-1234" }
   }
 ]
-users.forEach(function printNameAndPhones(details){
+// users.forEach(function printNameAndPhones(details){
+//   console.log(details.name)
+//   console.log(`Cell: ${details.phones.cell}`)
+//   console.log(`Office: ${details.phones.office}`)
+// }
+// )
+
+function printNameAndPhones(details){
   console.log(details.name)
-  console.log(`Cell: ${details.phones.cell}`)
-  console.log(`Office: ${details.phones.office}`)
+  console.log("Cell:", details.phones.cell)
+  console.log("Office:", details.phones.office)
 }
-)
+
+users.forEach(printNameAndPhones)
 // function printNameAndPhones
 // printNameAndPhones(users)
 // // => "Duane"
@@ -132,14 +138,16 @@ function myMap(array, callback) {
 // ***** Callbacks - Question 1 *****
 
 // *** Uncomment the lines below to test
-// console.log("%cCallbacks - Question 1", "color: red")
-
-// console.log(myMap([1,2,3,4,5], triple)) 
+console.log("%cCallbacks - Question 1", "color: red")
+function triple(myMap) {
+  console.log(myMap * 3)
+}
+ 
 // // => [3,6,9,12,15]
 
 // console.log(myMap([2,4,6,8], triple))   
 // // => [6,12,18,24]
-// console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red") 
 
 
 // ***** Callbacks - Question 2 *****
