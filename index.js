@@ -17,7 +17,7 @@ console.log("%cQuestion 2", "color: red")
 const name = "Anh"
 console.log(name)
 // => "Raffy"
-// name = "Not Raffy" 
+// name = "Not Anh" 
 // => TypeError
 console.log("%c----------", "color: red") 
 
@@ -224,4 +224,4 @@ console.log(nowServing(newLine))
 console.log(takeATicketNumberFunc(newLine))
 // // => `Welcome. You are ticket number 3`
 
-console.log("%c----------", "color: red") 
+console.log("%c----------", "color: red")
