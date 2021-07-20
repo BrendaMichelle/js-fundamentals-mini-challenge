@@ -6,6 +6,9 @@
 // // => 2
 // console.log("%c----------", "color: red") 
 
+counter = 1
+counter = 2
+console.log(counter)
 
 // ***** Question 2 *****
 // *** Uncomment the lines below to test
@@ -19,7 +22,8 @@
 // => TypeError
 // console.log("%c----------", "color: red") 
 
-
+const name = "Bob" 
+console.log(name)
 
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
@@ -32,6 +36,13 @@
 // console.log("%c----------", "color: red") 
 
 
+function drinkWater(current_thirst_level){
+  console.log("Man I sure am thirsty")
+  current_thirst_level -= 1
+  console.log("Ahh that hits the spot")
+  return current_thirst_level
+}
+console.log(drinkWater(12))
 
 // ***** Question 4 *****
 // *** Uncomment the lines below to test
@@ -50,7 +61,18 @@
 // // => "different"
 // console.log("%c----------", "color: red") 
 
-
+function sameSameButDifferent(num, maybeNum) {
+  if (num === maybeNum) {
+    return "same same"
+  }
+  else if (num == maybeNum) {
+    return "same same (but different)"
+  }
+  else {
+    return "different"
+  }
+}
+console.log(sameSameButDifferent(4, 3))
 
 // ***** Question 5 *****
 // *** Uncomment the lines below to test
@@ -61,7 +83,15 @@
 // // => { name: "Duane", grade: 92 }
 // console.log("%c----------", "color: red")
 
-
+function updateGrade(student, grade) {
+  student.grade = grade
+  }
+  
+  const student1 = { name: "Duane", grade: 88 }
+  
+  updateGrade(student1, 92)
+  
+  console.log(student1)  
 
 // ***** Question 6 *****
 // *** Uncomment the lines below to test
@@ -84,6 +114,34 @@
 // => "Office: 555-567-1234"
 // console.log("%c----------", "color: red") 
 
+users = [
+  { 
+    name: "Duane",
+    phones: {
+      cell: "555-123-4567",
+      office: "555-456-7890",
+    }
+  },
+  {
+    name: "Liza",
+    phones: {
+      cell: "555-234-5678",
+      office: "555-567-1234"
+    }
+  }
+]
+
+function print_name_and_phones(users){
+  users.forEach(beef)
+}
+
+function beef(user){
+  console.log(user.name)
+  console.log(user.phones.cell)
+  console.log(user.phones.office)
+}
+
+print_name_and_phones(users)
 
 // ***** Callbacks *****
 
@@ -109,6 +167,23 @@ function myMap(array, callback) {
 // // => [6,12,18,24]
 // console.log("%c----------", "color: red") 
 
+function myMap(array, callback) {
+  const result = []
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i]
+    const value = callback(element)
+    result.push(value)
+  }
+  return result
+}
+
+function triple(num) {
+  return (num * 3)
+}
+
+console.log(myMap([1,2,3,4,5], triple)) 
+
+console.log(myMap([2,4,6,8], triple))  
 
 // ***** Callbacks - Question 2 *****
 // *** Uncomment the lines below to test
@@ -118,7 +193,8 @@ function myMap(array, callback) {
 // // => ["Hi, Raffy!", "Hi, Chase!"]
 // console.log("%c----------", "color: red") 
 
-
+function greet(name) {
+  return `Hi, ${name}!`
 
 // ***** Scope & Closures *****
 
