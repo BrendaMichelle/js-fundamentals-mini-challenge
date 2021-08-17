@@ -6,6 +6,11 @@
 // // => 2
 // console.log("%c----------", "color: red") 
 
+let counter = 1
+
+counter = 2
+
+console.log(counter)
 
 // ***** Question 2 *****
 // *** Uncomment the lines below to test
@@ -19,7 +24,9 @@
 // => TypeError
 // console.log("%c----------", "color: red") 
 
+const name = 'Courtney'
 
+console.log(name)
 
 // ***** Question 3 *****
 // *** Uncomment the lines below to test
@@ -31,7 +38,11 @@
 // // => 11
 // console.log("%c----------", "color: red") 
 
-
+function drinkWater() {
+  console.log('Man I sure am thirsty')
+  currentThirstLevel -= 1
+  return currentThirstLevel
+}
 
 // ***** Question 4 *****
 // *** Uncomment the lines below to test
@@ -50,7 +61,15 @@
 // // => "different"
 // console.log("%c----------", "color: red") 
 
-
+function sameSameButDifferent(num, maybeNum) {
+  if (num === maybeNum) {
+    return "same same"
+  } else if (num == maybeNum) {
+    return "same same (but different)"
+  } else {
+    return "different"
+  }
+}
 
 // ***** Question 5 *****
 // *** Uncomment the lines below to test
@@ -61,7 +80,11 @@
 // // => { name: "Duane", grade: 92 }
 // console.log("%c----------", "color: red")
 
+function updateGrade(student,grade) {
+  const student1 = {name: "Courtney", grade: 88}
+}
 
+console.log(updateGrade)
 
 // ***** Question 6 *****
 // *** Uncomment the lines below to test
@@ -109,6 +132,9 @@ function myMap(array, callback) {
 // // => [6,12,18,24]
 // console.log("%c----------", "color: red") 
 
+function triple(num) {
+  return num * 3
+} 
 
 // ***** Callbacks - Question 2 *****
 // *** Uncomment the lines below to test
@@ -118,7 +144,26 @@ function myMap(array, callback) {
 // // => ["Hi, Raffy!", "Hi, Chase!"]
 // console.log("%c----------", "color: red") 
 
+function greet(name) {
+  return `Hi ${name}`
+}
 
+// ***** Scope & Closures *****
+
+function takeANumber(line, name) {
+  line.push(name)
+
+  return `Welcome, ${name}. You are number ${line.length} in line.`
+}
+
+function nowServing(line) {
+  if (!line.length) {
+    return "There is nobody waiting to be served!"
+  }
+  return `Currently serving ${line.shift()}.`
+}
+
+const line = []
 
 // ***** Scope & Closures *****
 
@@ -160,6 +205,16 @@ const line = []
 
 // console.log("%c----------", "color: red") 
 
+let ticketNumer = 0
+
+function takeATicketNumber(line) {
+  ticketNumber += 1
+  line.push(ticketNumber)
+  return `Welcome. You are ticket number ${ticketNumber}`
+}
+
+(would like some explation on this. looked at the solution for this and would just like some help making sense of it )
+
 // ***** Scope & Closures - Question 2 *****
 // *** Uncomment the lines below to test
 // console.log("%cScope & Closures - Question 2", "color: red")
@@ -182,3 +237,13 @@ const line = []
 // // => `Welcome. You are ticket number 3`
 
 // console.log("%c----------", "color: red") 
+
+function takeAticketNumberFunc () {
+  let number = 0 
+
+  return function (line) {
+    number += 1
+    line.push(number)
+    return `Welcome. you are ticket number  `
+  }
+}
